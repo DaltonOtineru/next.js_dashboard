@@ -9,22 +9,16 @@ const RecentOrder = ({
   },
 }) => {
   return (
-    <div className="w-full p-2 grid grid-cols-10 bg-gray-50 rounded-lg">
-      <div className="col-span-1 rounded-lg bg-purple-200 text-purple-900 flex justify-center items-center">
-        <FaShoppingBag size={20} />
+    <li className="flex items-center p-2 my-3 bg-gray-50 hover:bg-gray-100 rounded-lg cursor-pointer">
+      <div className="bg-purple-100 rounded-lg p-3">
+        <FaShoppingBag size={20} className="text-purple-800" />
       </div>
-      <div className="col-span-9 flex justify-between">
-        <div className="flex flex-col pl-4">
-          <p className="font-bold">${total}</p>
-          <p className="text-sm text-gray-500">
-            {first} {last}
-          </p>
-        </div>
-        <div className="flex justify-center items-center">
-          <p className="text-gray-900 text-sm">{date}</p>
-        </div>
+      <div className="pl-4">
+        <p className="text-gray-800 font-bold">${total}</p>
+        <p className="text-gray-400 text-sm">{first}</p>
       </div>
-    </div>
+      <p className="lg:flex md:hidden absolute right-6 text-sm">{date}</p>
+    </li>
   );
 };
 
